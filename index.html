@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rifqi Alan Maulana: Software Developer Portfolio</title>
+  
+  <!-- Fonts: Bricolage Grotesque (Headlines & Numbers), Caveat (Script), Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js 3D Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Top Navigation Pill -->
+  <nav id="nav" aria-label="Navigasi Utama"></nav>
+
+  <!-- Stage: 3D Portfolio Tour (Isometric 3D Canvas) -->
+  <div class="stage" id="stage" aria-hidden="true">
+    <canvas id="c"></canvas>
+    <div class="script" id="script"></div>
+    <div class="copy" id="copy"></div>
+  </div>
+
+  <!-- Interactive Bottom Stepper Bar -->
+  <div class="prog" id="prog" aria-label="Progres Tur 3D"></div>
+
+  <!-- Spacer to drive scrollytelling -->
+  <div class="spacer" id="spacer"></div>
+
+  <!-- Website Biasa (Setelah Tur 3D Selesai) -->
+  <main class="normal-content" id="website-biasa">
+    
+    <!-- Hero dan Transisi ke Website Biasa -->
+    <section class="section-hero" aria-labelledby="hero-heading">
+      <div class="badge-pill">● Open to Work & Freelance</div>
+      <h1 class="hero-title" id="hero-heading">Rifqi Alan Maulana</h1>
+      <p class="hero-subtitle">
+        Mahasiswa Sistem Informasi di <strong>Universitas Hasanuddin (IPK 3.97)</strong> dengan fokus rekayasa perangkat lunak full-stack, aplikasi Android native, serta sistem kecerdasan buatan berbasis Retrieval-Augmented Generation (RAG).
+      </p>
+      <div class="hero-cta">
+        <a href="#proyek" class="btn d">Daftar Proyek</a>
+        <button type="button" class="btn" onclick="openContactModal()">Hubungi Saya</button>
+        <button type="button" class="btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Kembali ke Tur 3D</button>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <b>3.97</b>
+          <span>IPK Kumulatif (skala 4.00)</span>
+        </div>
+        <div class="stat-item">
+          <b>6</b>
+          <span>Proyek Digital Selesai</span>
+        </div>
+        <div class="stat-item">
+          <b>Full-Stack</b>
+          <span>Web, Android, AI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Tentang Saya -->
+    <section class="content-section" id="tentang" aria-labelledby="tentang-heading">
+      <div class="section-eyebrow">TENTANG SAYA</div>
+      <h2 class="section-title" id="tentang-heading">Rekayasa Solusi Digital dari Logika ke Produk Nyata</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Pendidikan & Aktivitas Akademik</h3>
+          <p><strong>Universitas Hasanuddin</strong>, S1 Sistem Informasi (2024 – Sekarang)</p>
+          <p>Mendalami arsitektur perangkat lunak scalable, integrasi API performa tinggi, dan implementasi machine learning terapan.</p>
+          <ul class="check-list">
+            <li>Asisten Praktikum Pemrograman Berorientasi Objek (PBO)</li>
+            <li>Asisten Kalkulus I</li>
+            <li>Staf Divisi IT Disability Center Unhas</li>
+            <li>Staf Kesekretariatan & Kewirausahaan UKM KPI Unhas</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Fokus Keahlian Rekayasa</h3>
+          <p>Menggabungkan fondasi rekayasa perangkat lunak modern dengan kapabilitas AI mutakhir:</p>
+          <ul class="check-list">
+            <li><strong>Modern Web Apps:</strong> Next.js, React, Node.js, Laravel</li>
+            <li><strong>Native Android:</strong> Kotlin, Jetpack Compose, MVVM</li>
+            <li><strong>Generative AI:</strong> RAG System, LangChain, Vector Database</li>
+            <li><strong>Database & DevOps:</strong> PostgreSQL, MySQL, Docker, Git</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Proyek Unggulan (6 Proyek Lengkap) -->
+    <section class="content-section" id="proyek" aria-labelledby="proyek-heading">
+      <div class="section-eyebrow">PORTOFOLIO LENGKAP</div>
+      <h2 class="section-title" id="proyek-heading">6 Proyek Unggulan yang Telah Dibangun</h2>
+      
+      <div class="projects-grid">
+        <!-- Proyek 1: RemoteIn -->
+        <article class="project-card">
+          <div class="project-tag">Web Application · Proyek 1</div>
+          <h3>RemoteIn</h3>
+          <p class="project-tagline">Portal Lowongan Kerja Remote</p>
+          <p class="project-desc">Platform lowongan kerja remote yang mempertemukan perusahaan dan pencari kerja dalam satu aplikasi web responsif dan cepat.</p>
+          <div class="tech-chips">
+            <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Pencarian lowongan instan dan filter kategori</li>
+            <li>Dashboard pelamar dan portal rekruter terpadu</li>
+            <li>Autentikasi aman dan manajemen profil</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+
+        <!-- Proyek 2: HRM App -->
+        <article class="project-card">
+          <div class="project-tag">Enterprise System · Proyek 2</div>
+          <h3>HRM Application</h3>
+          <p class="project-tagline">Sistem Manajemen SDM Perusahaan</p>
+          <p class="project-desc">Aplikasi manajemen sumber daya manusia untuk data karyawan terpadu, absensi harian, pengajuan cuti, dan rekapitulasi penggajian.</p>
+          <div class="tech-chips">
+            <span>Laravel</span><span>MySQL</span><span>Tailwind CSS</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Data karyawan dan absensi realtime</li>
+            <li>Pengajuan dan persetujuan cuti bertingkat</li>
+            <li>Laporan dan rekapitulasi otomatis</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+
+        <!-- Proyek 3: E-Learning -->
+        <article class="project-card">
+          <div class="project-tag">Education Tech · Proyek 3</div>
+          <h3>E-Learning Platform</h3>
+          <p class="project-tagline">Course Management Platform</p>
+          <p class="project-desc">Platform kursus online komprehensif untuk mengelola modul materi, kelas interaktif, kuis terotomatisasi, dan progres belajar siswa.</p>
+          <div class="tech-chips">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Manajemen kurikulum kelas dan materi video</li>
+            <li>Kuis interaktif dan penilaian otomatis</li>
+            <li>Pelacakan progres belajar peserta real-time</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+
+        <!-- Proyek 4: HomeCraft -->
+        <article class="project-card">
+          <div class="project-tag">Mobile Native · Proyek 4</div>
+          <h3>HomeCraft</h3>
+          <p class="project-tagline">Native Android E-Commerce</p>
+          <p class="project-desc">Aplikasi e-commerce Android native untuk produk kerajinan rumah tangga unik, dari katalog interaktif sampai proses checkout.</p>
+          <div class="tech-chips">
+            <span>Kotlin</span><span>Jetpack Compose</span><span>Firebase</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Katalog, keranjang, dan alur checkout lancar</li>
+            <li>Notifikasi pesanan push realtime</li>
+            <li>Antarmuka native yang responsif</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+
+        <!-- Proyek 5: SmartDoc Assistant -->
+        <article class="project-card">
+          <div class="project-tag">AI & NLP · Proyek 5</div>
+          <h3>SmartDoc AI</h3>
+          <p class="project-tagline">RAG AI Document Assistant</p>
+          <p class="project-desc">Asisten AI berbasis Retrieval-Augmented Generation (RAG) yang menjawab pertanyaan dari dokumen PDF/Word lengkap dengan sitasi rujukan sumber.</p>
+          <div class="tech-chips">
+            <span>Python</span><span>LangChain</span><span>Vector DB</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Unggah dan ekstraksi indeks dokumen</li>
+            <li>Jawaban akurat dengan kutipan nomor halaman</li>
+            <li>Pencarian semantik berkecepatan tinggi</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+
+        <!-- Proyek 6: KPI System -->
+        <article class="project-card">
+          <div class="project-tag">Data Analytics · Proyek 6</div>
+          <h3>KPI Management</h3>
+          <p class="project-tagline">Universitas Samudra Metrics</p>
+          <p class="project-desc">Sistem manajemen indikator kinerja utama untuk Universitas Samudra: penetapan target tahunan, pengisian capaian, dan dashboard metrik institusi.</p>
+          <div class="tech-chips">
+            <span>Laravel</span><span>MySQL</span><span>Chart.js</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Penetapan indikator dan target per unit kerja</li>
+            <li>Input dan verifikasi capaian berkala</li>
+            <li>Dashboard visualisasi kinerja institusi</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/rifqialan" target="_blank" rel="noopener noreferrer" class="btn d">Lihat Repositori</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section Keahlian & Tech Stack (7 Domain Spesialisasi) -->
+    <section class="content-section" id="keahlian" aria-labelledby="keahlian-heading">
+      <div class="section-eyebrow">KEAHLIAN & DOMAIN SPESIALISASI</div>
+      <h2 class="section-title" id="keahlian-heading">Keahlian Teknis & Domain Rekayasa</h2>
+      
+      <div class="skills-showcase-grid">
+
+        <!-- 01 Machine Learning & AI -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">01</span>
+            <div class="skill-icons-row">
+              <!-- Python -->
+              <div class="skill-icon-badge" title="Python">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M11.9 2C6.9 2 7.2 4.2 7.2 4.2l.01 2.2h4.8v.7H5.2S2 6.7 2 11.8c0 5 2.8 4.9 2.8 4.9h1.7v-2.4s-.1-2.8 2.8-2.8h4.8s2.7.04 2.7-2.6V4.6S17 2 11.9 2zm-2.4 1.5a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z" fill="#387eb8"/>
+                  <path d="M12.1 22c5 0 4.7-2.2 4.7-2.2l-.01-2.2H12v-.7h6.8s3.2.4 3.2-4.7c0-5-2.8-4.9-2.8-4.9h-1.7v2.4s.1 2.8-2.8 2.8h-4.8s-2.7-.04-2.7 2.6v4.3s-.2 2.6 4.9 2.6zm2.4-1.5a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z" fill="#ffe052"/>
+                </svg>
+              </div>
+              <!-- Scikit-learn -->
+              <div class="skill-icon-badge" title="Scikit-learn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="9" cy="9" r="6" fill="#F89939" opacity="0.9"/>
+                  <circle cx="15" cy="15" r="6" fill="#3499CD" opacity="0.85"/>
+                </svg>
+              </div>
+              <!-- TensorFlow -->
+              <div class="skill-icon-badge" title="TensorFlow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l8 4.6v9.2L12 20.4l-8-4.6V6.6L12 2z" stroke="#FF6F00" stroke-width="2"/>
+                  <path d="M12 6.5v9M8 8.8l4 2.3 4-2.3" stroke="#FF6F00" stroke-width="2"/>
+                </svg>
+              </div>
+              <!-- PyTorch -->
+              <div class="skill-icon-badge" title="PyTorch">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3l1.8 1.8a7 7 0 1 1-9.9 9.9L12 3z" fill="#EE4C2C"/>
+                  <circle cx="15.5" cy="8.5" r="1.5" fill="#EE4C2C"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>Supervised Learning</span>
+            <span>Deep Learning</span>
+            <span>Generative AI</span>
+            <span>LightGBM</span>
+            <span>XGBoost</span>
+          </div>
+
+          <h3>Machine Learning & AI</h3>
+          <p>Developing machine learning and deep learning models for practical problems, from data preparation to training and evaluation.</p>
+        </article>
+
+        <!-- 02 Computer Vision -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">02</span>
+            <div class="skill-icons-row">
+              <!-- Roboflow / OpenCV / YOLO -->
+              <div class="skill-icon-badge" title="Roboflow & YOLO">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" fill="#7D52FF"/>
+                  <circle cx="12" cy="12" r="4" fill="#7D52FF"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>YOLOv8</span>
+            <span>MobileNetV2</span>
+            <span>Transfer Learning</span>
+            <span>Image Synthesis</span>
+            <span>OCR</span>
+          </div>
+
+          <h3>Computer Vision</h3>
+          <p>Building image recognition, object detection, and OCR pipelines using deep learning and transfer learning architectures.</p>
+        </article>
+
+        <!-- 03 Data & Predictive Analytics -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">03</span>
+            <div class="skill-icons-row">
+              <!-- Analytics / Matplotlib / Stats -->
+              <div class="skill-icon-badge" title="Data Analytics">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 20h16M7 16v-4M12 16V8M17 16v-7" stroke="#387eb8" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-icon-badge" title="Predictive Modeling">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 16l6-6 4 4 6-8" stroke="#00B4D8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>EDA & Data Cleaning</span>
+            <span>Demand Forecasting</span>
+            <span>Data Visualization</span>
+            <span>Sweetviz</span>
+            <span>PyCaret</span>
+          </div>
+
+          <h3>Data & Predictive Analytics</h3>
+          <p>Transforming raw data into actionable insights and demand forecasts through cleaning, exploratory analysis, and modeling.</p>
+        </article>
+
+        <!-- 04 Product Thinking & UI/UX -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">04</span>
+            <div class="skill-icons-row">
+              <!-- Figma -->
+              <div class="skill-icon-badge" title="Figma">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M8 2h4a4 4 0 0 1 0 8H8V2z" fill="#FF7262"/>
+                  <path d="M4 6a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4z" fill="#F24E1E"/>
+                  <path d="M4 14a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4z" fill="#A259FF"/>
+                  <path d="M4 22a4 4 0 0 1 4-4h4v4a4 4 0 0 1-4 4 4 4 0 0 1-4-4z" fill="#0ACF83"/>
+                  <circle cx="16" cy="14" r="4" fill="#1ABCFE"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>User Research</span>
+            <span>User Flows</span>
+            <span>Wireframing</span>
+            <span>Information Architecture</span>
+            <span>Design Systems</span>
+          </div>
+
+          <h3>Product Thinking & UI/UX</h3>
+          <p>Combining technical problem-solving with user-centered design to structure clear, purposeful digital products.</p>
+        </article>
+
+        <!-- 05 Front-End & Styling -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">05</span>
+            <div class="skill-icons-row">
+              <!-- TypeScript -->
+              <div class="skill-icon-badge" title="TypeScript">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect width="24" height="24" rx="4" fill="#3178C6"/>
+                  <path d="M10 8H5v2h1.6v7h2.2v-7H10V8zm3.2 4.6c.7-.4 1.4-.7 2.2-.7.8 0 1.2.3 1.2.8 0 .5-.4.7-1.3 1-1.4.5-2.5 1.1-2.5 2.5 0 1.6 1.3 2.5 2.9 2.5 1 0 1.9-.3 2.5-.7l-.5-1.5c-.6.3-1.3.5-1.9.5-.7 0-1.1-.3-1.1-.8 0-.5.5-.8 1.4-1.1 1.5-.5 2.4-1.2 2.4-2.5 0-1.5-1.2-2.4-2.8-2.4-1 0-1.9.3-2.4.6l.4 1.8z" fill="#fff"/>
+                </svg>
+              </div>
+              <!-- JavaScript -->
+              <div class="skill-icon-badge" title="JavaScript">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+                  <path d="M8.5 17.5c.6.9 1.4 1.4 2.5 1.4 1.3 0 2.2-.7 2.2-2.1v-6.3h-2.1v6.3c0 .5-.3.8-.8.8-.4 0-.7-.3-.9-.6l-.9.5zm6.8-.1c.7.8 1.7 1.5 3 1.5 1.7 0 2.7-.9 2.7-2.3 0-1.3-.8-1.9-2.2-2.5l-.6-.3c-.8-.3-1.3-.6-1.3-1.2 0-.6.5-1 1.3-1 .8 0 1.4.3 1.8.9l1.1-1c-.7-.9-1.6-1.3-2.9-1.3-1.7 0-2.8 1-2.8 2.3 0 1.2.8 1.8 2.1 2.4l.6.3c.9.4 1.5.7 1.5 1.4 0 .7-.6 1.1-1.5 1.1-1 0-1.8-.5-2.3-1.3l-1 1.5z" fill="#000"/>
+                </svg>
+              </div>
+              <!-- React -->
+              <div class="skill-icon-badge" title="React">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <ellipse cx="12" cy="12" rx="4" ry="10" stroke="#61DAFB" stroke-width="1.8"/>
+                  <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.8"/>
+                  <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.8"/>
+                  <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+                </svg>
+              </div>
+              <!-- Next.js -->
+              <div class="skill-icon-badge" title="Next.js">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#000" stroke="#fff" stroke-width="1.5"/>
+                  <path d="M15 8v8M9 8v8l6.8-8.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <!-- Vue -->
+              <div class="skill-icon-badge" title="Vue.js">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M2 3h4l6 10.5L18 3h4L12 21 2 3z" fill="#42B883"/>
+                  <path d="M6.5 3h3.5L12 6.5 14 3h3.5L12 12 6.5 3z" fill="#35495E"/>
+                </svg>
+              </div>
+              <!-- Tailwind CSS -->
+              <div class="skill-icon-badge" title="Tailwind CSS">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 10c1.5-2 3.5-3 6-3 3.5 0 5 2 6.5 3.5 1 1 2 1.5 3.5 1.5-1.5 2-3.5 3-6 3-3.5 0-5-2-6.5-3.5-1-1-2-1.5-3.5-1.5zm-4 5c1.5-2 3.5-3 6-3 3.5 0 5 2 6.5 3.5 1 1 2 1.5 3.5 1.5-1.5 2-3.5 3-6 3-3.5 0-5-2-6.5-3.5-1-1-2-1.5-3.5-1.5z" fill="#38BDF8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+            <span>React & Next.js</span>
+            <span>Tailwind CSS</span>
+            <span>Component Frameworks</span>
+          </div>
+
+          <h3>Front-End & Styling</h3>
+          <p>Building responsive, accessible web interfaces with modern component frameworks and utility-first styling.</p>
+        </article>
+
+        <!-- 06 Back-End & API Integration -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">06</span>
+            <div class="skill-icons-row">
+              <!-- FastAPI -->
+              <div class="skill-icon-badge" title="FastAPI">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#009688"/>
+                  <path d="M12 6l-4 6h4l-1 6 5-7h-4l1-5z" fill="#fff"/>
+                </svg>
+              </div>
+              <!-- Node.js -->
+              <div class="skill-icon-badge" title="Node.js">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l9 5.2v10.4L12 22l-9-5.2V7.2L12 2z" fill="#5FA04E"/>
+                </svg>
+              </div>
+              <!-- Laravel -->
+              <div class="skill-icon-badge" title="Laravel">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 6l7-4 7 4v12l-7 4-7-4V6z" fill="#FF2D20"/>
+                </svg>
+              </div>
+              <!-- Django -->
+              <div class="skill-icon-badge" title="Django">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect width="24" height="24" rx="4" fill="#092E20"/>
+                  <text x="6" y="16" fill="#fff" font-size="11" font-weight="bold" font-family="sans-serif">dj</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>REST APIs</span>
+            <span>Model Deployment</span>
+            <span>FastAPI & Python</span>
+            <span>Node.js & Express</span>
+            <span>Laravel (PHP)</span>
+          </div>
+
+          <h3>Back-End & API Integration</h3>
+          <p>Developing server-side logic and REST APIs that connect data processing, ML inference, and user-facing applications.</p>
+        </article>
+
+        <!-- 07 Databases & Version Control -->
+        <article class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-num">07</span>
+            <div class="skill-icons-row">
+              <!-- PostgreSQL -->
+              <div class="skill-icon-badge" title="PostgreSQL">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#336791"/>
+                  <path d="M12 6a5 5 0 0 0-5 5c0 3 2.5 5 5 7 2.5-2 5-4 5-7a5 5 0 0 0-5-5z" fill="#fff" opacity="0.85"/>
+                </svg>
+              </div>
+              <!-- MySQL -->
+              <div class="skill-icon-badge" title="MySQL">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#00758F"/>
+                  <path d="M7 14c1.5-2 3-3 5-3s3.5 1 5 3" stroke="#F29111" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <!-- MongoDB -->
+              <div class="skill-icon-badge" title="MongoDB">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2C12 2 7 8 7 13a5 5 0 0 0 10 0c0-5-5-11-5-11z" fill="#47A248"/>
+                </svg>
+              </div>
+              <!-- Firebase -->
+              <div class="skill-icon-badge" title="Firebase">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 18l2-13 4 7-6 6zm14 0l-3-15-4 7 7 8z" fill="#FFA000"/>
+                  <path d="M12 10l-2-4-7 12 9 4 7-4-7-8z" fill="#F57C00"/>
+                </svg>
+              </div>
+              <!-- Git -->
+              <div class="skill-icon-badge" title="Git">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M21.5 11l-8.5-8.5a1.5 1.5 0 0 0-2.1 0L9.4 4l3.1 3.1a2 2 0 0 1 2.5 2.5l2.4 2.4a2 2 0 1 1-1.1 1l-2.2-2.2v4.8a2 2 0 1 1-1.5 0V9.8L9.5 6.7l-7 7a1.5 1.5 0 0 0 0 2.1l8.5 8.5a1.5 1.5 0 0 0 2.1 0l8.4-8.4a1.5 1.5 0 0 0 0-2.1z" fill="#F05032"/>
+                </svg>
+              </div>
+              <!-- GitHub -->
+              <div class="skill-icon-badge" title="GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" fill="#fff"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pills">
+            <span>PostgreSQL</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>Firebase</span>
+            <span>Git & GitHub Workflows</span>
+          </div>
+
+          <h3>Databases & Version Control</h3>
+          <p>Structuring reliable relational and document databases while managing collaborative code workflows.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section Pengalaman & Riset -->
+    <section class="content-section" id="pengalaman" aria-labelledby="pengalaman-heading">
+      <div class="section-eyebrow">PENGALAMAN & RISET</div>
+      <h2 class="section-title" id="pengalaman-heading">Aktivitas Profesional & Akademik</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mei 2026 – Sekarang</div>
+          <h4>Staf Redaksi JURNAL ABDI (Sosial, Humaniora & Sains)</h4>
+          <p>Mendukung proses penelaahan naskah ilmiah, koordinasi editorial, dan persiapan publikasi berkala.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Feb 2026 – Sekarang</div>
+          <h4>PPK Ormawa: Pengembang IoT Smart AWD</h4>
+          <p>Mengembangkan sistem pemantauan ketinggian air sawah otomatis berbasis IoT dengan ESP32, sensor ultrasonik, modul GSM, dan tenaga panel surya.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Nov 2024 – Des 2025</div>
+          <h4>PKM-RE (Riset Eksakta): Machine Learning</h4>
+          <p>Melakukan riset klasifikasi toleransi stres tanaman padi menggunakan machine learning dan data fenotip berbasis citra.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Samsung Innovation Campus</div>
+          <h4>Team Leader: Solusi AI & IoT</h4>
+          <p>Memimpin tim dalam merancang dan mengembangkan solusi terpadu berbasis AI dan perangkat IoT.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Kontak -->
+    <section class="content-section section-contact" id="kontak" aria-labelledby="kontak-heading">
+      <div class="contact-box">
+        <div class="contact-info">
+          <div class="section-eyebrow" style="color:var(--or-text)">HUBUNGI SAYA</div>
+          <h2 class="section-title" id="kontak-heading" style="margin-bottom:12px">Diskusi Proyek dan Kolaborasi</h2>
+          <p class="contact-lead">
+            Saya terbuka untuk peluang kerja full-time, proyek freelance, maupun kolaborasi pengembangan produk digital.
+          </p>
+
+          <div class="contact-items">
+            <div class="c-item">
+              <span>Email</span>
+              <strong><a href="mailto:rifqialan46475@gmail.com">rifqialan46475@gmail.com</a></strong>
+            </div>
+            <div class="c-item">
+              <span>WhatsApp / Telepon</span>
+              <strong><a href="tel:+6282292238133">+62 822-9223-8133</a></strong>
+            </div>
+            <div class="c-item">
+              <span>Domisili</span>
+              <strong>Tamalanrea Indah, Makassar, Indonesia</strong>
+            </div>
+            <div class="c-item">
+              <span>LinkedIn</span>
+              <strong><a href="https://www.linkedin.com/in/rifqialan" target="_blank" rel="noopener noreferrer">linkedin.com/in/rifqialan</a></strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+          <h3>Kirim Pesan Langsung</h3>
+          <div class="form-group">
+            <label for="cn-name">Nama Anda</label>
+            <input type="text" id="cn-name" required placeholder="Contoh: Budi Santoso">
+          </div>
+          <div class="form-group">
+            <label for="cn-email">Email Anda</label>
+            <input type="email" id="cn-email" required placeholder="budi@example.com">
+          </div>
+          <div class="form-group">
+            <label for="cn-msg">Kebutuhan Proyek / Pesan</label>
+            <textarea id="cn-msg" rows="4" required placeholder="Ceritakan ide produk, website, atau kolaborasi yang ingin dijalankan..."></textarea>
+          </div>
+          <button type="submit" class="btn d" style="width:100%; justify-content:center;">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <b>Rifqi Alan Maulana</b> · Software Developer Portfolio
+      </div>
+      <div class="footer-right">
+        <button type="button" class="btn btn-sm" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          Kembali ke Tur 3D
+        </button>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Modal Kontak Cepat -->
+  <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Tutup dialog kontak">✕</button>
+      
+      <div class="modal-sidebar">
+        <div class="modal-logo">Rifqi<i>.</i></div>
+        <p class="modal-bio">Full-Stack, Mobile, dan AI Developer yang siap membantu mewujudkan produk digital Anda.</p>
+        <div class="modal-status-badge">● Open to Work / Freelance</div>
+        <div class="modal-contact-details">
+          <div>📧 <strong>rifqialan46475@gmail.com</strong></div>
+          <div>📱 <strong>+62 822-9223-8133</strong></div>
+          <div>📍 Tamalanrea Indah, Makassar, Indonesia</div>
+          <div>💼 <a href="https://www.linkedin.com/in/rifqialan" target="_blank" rel="noopener noreferrer" style="color:var(--or-text);">linkedin.com/in/rifqialan</a></div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-title">Hubungi Saya</h2>
+        <p class="wizard-sub">Kirimkan pesan atau tawaran kolaborasi proyek.</p>
+        
+        <form onsubmit="handleContactSubmit(event)" class="contact-form">
+          <div class="form-group">
+            <label for="c-name">Nama Lengkap</label>
+            <input type="text" id="c-name" required placeholder="Nama Anda atau Perusahaan">
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email Kontak</label>
+            <input type="email" id="c-email" required placeholder="nama@email.com">
+          </div>
+          <div class="form-group">
+            <label for="c-msg">Kebutuhan Proyek / Pesan</label>
+            <textarea id="c-msg" rows="4" required placeholder="Ceritakan ide produk, website, aplikasi, atau peran yang Anda butuhkan..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn" onclick="closeContactModal()">Batal</button>
+            <button type="submit" class="btn d">Kirim Pesan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
