@@ -902,8 +902,14 @@ function frame() {
       prog.style.pointerEvents = fade > 0.8 ? 'none' : 'auto';
     }
     if (scr) scr.style.opacity = '0';
-    if (stageEl && fade > 0.85) {
-      stageEl.style.pointerEvents = 'none';
+    if (stageEl) {
+      stageEl.style.opacity = `${Math.max(0, 1 - fade)}`;
+      stageEl.style.pointerEvents = fade > 0.85 ? 'none' : 'auto';
+      if (fade >= 1) {
+        stageEl.style.visibility = 'hidden';
+      } else {
+        stageEl.style.visibility = 'visible';
+      }
     }
   } else {
     if (copy && !copy.classList.contains('out')) {
@@ -915,7 +921,9 @@ function frame() {
       prog.style.pointerEvents = 'auto';
     }
     if (stageEl) {
-      stageEl.style.pointerEvents = 'auto';
+      stageEl.style.opacity = '1';
+      stageEl.style.visibility = 'visible';
+      stageEl.style.pointerEvents = 'none';
     }
   }
 
