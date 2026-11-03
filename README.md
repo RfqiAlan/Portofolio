@@ -1,62 +1,53 @@
-# Rifqi Alan Maulana: 3D Interactive Portfolio
+# Rifqi Alan Maulana - Interactive 3D Portfolio
 
-Sebuah website portofolio interaktif berbasis 3D isometrik scrollytelling yang dibangun menggunakan Three.js dan web modern standar. Menampilkan visualisasi ruang kantor virtual, karakter interaktif yang bergerak mengikuti alur scroll, 6 showcase proyek rekayasa perangkat lunak, serta resume profil profesional lengkap.
-
----
-
-## Fitur Utama
-
-* **3D Isometric Scrollytelling:** Visualisasi gedung kantor dan 6 bilik proyek yang dikendalikan secara halus melalui scroll roda mouse atau gestur layar sentuh.
-* **Procedural Character & Path:** Karakter 3D yang berjalan dinamis mengikuti kurva *Catmull-Rom spline* melintasi setiap ruangan kerja.
-* **Seamless Page Transition:** Setelah tur 3D selesai di bilik proyek ke-6, halaman bertransisi mulus menjadi website profil konvensional yang dapat di-scroll seperti biasa.
-* **7 Domain Keahlian:** Meliputi Machine Learning & AI, Computer Vision, Data & Predictive Analytics, Product Thinking & UI/UX, Front-End, Back-End & API, serta Databases & Version Control.
-* **Accessible & High-Contrast:** Memenuhi standar aksesibilitas WCAG AAA dengan tipografi tajam, dukungan mode gelap dan terang, serta bebas elemen visual artifisial.
+Website portofolio interaktif berbasis 3D scrollytelling dan web showcase modern untuk Rifqi Alan Maulana, mahasiswa Sistem Informasi Universitas Hasanuddin.
 
 ---
 
-## Tech Stack
+## 🚀 Fitur Utama
 
-* **3D Graphics:** Three.js (WebGL procedural geometries & canvas texturing)
-* **Core:** Semantic HTML5, Modern CSS3 (CSS Variables, Flexbox, Grid), Vanilla JavaScript (ES6+)
-* **Typography:** Bricolage Grotesque, Plus Jakarta Sans, Caveat
-* **Deployment:** Vercel
+- **3D Isometric Room Scrollytelling**: Menggunakan Three.js dengan rotasi kamera dinamis, objek interaktif (laptop, tablet, books, graduation cap), serta smooth camera panning berdasarkan posisi scroll.
+- **Transisi Seamless ke Konten Solid**: Transisi bersih tanpa bleed-through dari stage 3D ke konten detail portofolio.
+- **Katalog 6 Proyek Unggulan**:
+  1. *Si-PPKS Unhas* (Pelaporan & Pencegahan Kekerasan Seksual Kampus)
+  2. *RAG Chatbot Asisten Akademik* (Retrieval-Augmented Generation & Vector DB)
+  3. *Unhas Smart Room & Asset Tracker* (Manajemen Fasilitas Kampus)
+  4. *Mobile POS & Kasir Pintar UMKM* (Native Android Kotlin & Offline First)
+  5. *Sistem Informasi Rekam Medis RS* (Full-Stack Electronic Health Records)
+  6. *Dashboard Analytics & Prediksi Akademik* (Predictive Student Performance)
+- **Modal Interaktif Detail Proyek**: Arsitektur, tech stack, tantangan teknis, dan solusi rekayasa.
+- **Formulir Kontak Cepat**: Dialog interaktif untuk tawaran kolaborasi dan rekrutmen.
+- **Keamanan & SEO Terverifikasi**: Dilengkapi HTTP Security Headers (HSTS, CSP-ready, X-Content-Type-Options), Open Graph, Twitter Cards, `robots.txt`, `sitemap.xml`, dan Schema.org JSON-LD.
 
 ---
 
-## Struktur Folder
+## 🛠️ Tech Stack
+
+- **3D Graphics Engine**: Three.js (r128)
+- **Frontend Architecture**: Vanilla HTML5, CSS3 Modern (Custom Properties, CSS Grid, Flexbox, Mobile Responsive)
+- **Typography**: Bricolage Grotesque, Plus Jakarta Sans, Caveat
+- **Deployment & Cloud**: Vercel Serverless Edge
+
+---
+
+## 🌐 Struktur Proyek
 
 ```text
-├── index.html                  # Dokumen HTML utama dan struktur website biasa
-├── styles.css                  # Desain visual, sistem token warna, responsivitas
-├── app.js                      # Engine Three.js, spline, kamera, animasi, dan scrollytelling
-├── vercel.json                 # Konfigurasi deployment Vercel
-├── CV-Rifqi Alan Maulana.pdf  # Berkas resume unduhan
-└── README.md                   # Dokumentasi proyek
+├── index.html               # Halaman utama dengan meta tag SEO dan Schema.org
+├── styles.css               # Desain visual, tema, dan responsivitas mobile
+├── app.js                   # Engine Three.js, data proyek, dan event listener
+├── vercel.json              # Konfigurasi deployment dan HTTP security headers
+├── robots.txt               # Instruksi crawler search engine
+├── sitemap.xml              # Peta situs terstruktur
+└── CV-Rifqi Alan Maulana.pdf # Dokumen resume resmi
 ```
 
 ---
 
-## Menjalankan Proyek Secara Lokal
+## 👤 Kontak & Profil
 
-1. Clone repositori ini:
-   ```bash
-   git clone https://github.com/RfqiAlan/Portofolio.git
-   cd Portofolio
-   ```
-
-2. Buka dengan Live Server di VS Code atau jalankan server lokal:
-   ```bash
-   npx serve .
-   ```
-
-3. Buka peramban pada alamat `http://localhost:3000`.
-
----
-
-## Kontak & Profil
-
-* **Nama:** Rifqi Alan Maulana
-* **Pendidikan:** S1 Sistem Informasi, Universitas Hasanuddin (IPK 3.97)
-* **Email:** [rifqialan46475@gmail.com](mailto:rifqialan46475@gmail.com)
-* **GitHub:** [github.com/RfqiAlan](https://github.com/RfqiAlan)
-
+- **Nama**: Rifqi Alan Maulana
+- **Institusi**: Universitas Hasanuddin - S1 Sistem Informasi (IPK 3.97)
+- **Email**: [rifqialan46475@gmail.com](mailto:rifqialan46475@gmail.com)
+- **LinkedIn**: [linkedin.com/in/rifqialan](https://www.linkedin.com/in/rifqialan)
+- **GitHub**: [github.com/RfqiAlan](https://github.com/RfqiAlan)
