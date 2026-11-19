@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terima Kasih | Rifqi Alan Maulana</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bayar.css">
+</head>
+<body class="pay-page">
+
+  <header class="pay-top">
+    <a class="pay-brand" href="/">Rifqi<i>.</i></a>
+    <a class="btn btn-sm" href="/">← Kembali ke Portofolio</a>
+  </header>
+
+  <main class="pay-wrap">
+    <div class="pay-card pay-thanks">
+      <div class="pay-thanks-icon" aria-hidden="true">✓</div>
+      <div class="eyebrow">Pembayaran</div>
+      <h1 class="pay-title">Terima kasih!</h1>
+      <p class="pay-lead">
+        Pembayaran QRIS Anda sudah selesai diproses. Tidak perlu mengirim bukti transfer,
+        status pembayaran tercatat otomatis.
+      </p>
+      <dl class="pay-merchant" id="pay-order-box" hidden>
+        <div><dt>Nomor pesanan</dt><dd id="pay-order">–</dd></div>
+      </dl>
+      <div class="pay-actions">
+        <a class="btn" href="/bayar">Bayar lagi</a>
+        <a class="btn d" href="/">Ke Beranda</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left"><b>Rifqi Alan Maulana</b> · Pembayaran QRIS</div>
+  </footer>
+
+  <script>
+    (function () {
+      var order = new URLSearchParams(location.search).get('order') || '';
+      if (/^[A-Za-z0-9-]{1,64}$/.test(order)) {
+        document.getElementById('pay-order').textContent = order;
+        document.getElementById('pay-order-box').hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>
